@@ -1,0 +1,9 @@
+﻿@model TrotamundosNetCore.Clases.Util.Highcharts
+
+<div id="@Model.ContainerId" class="tilemapContainer">
+
+</div>
+
+<script>
+    CreaTilemap("@Model.ContainerId", @Html.Raw(Model.dataJson), @Model.maxX, @Model.maxY)
+</script>

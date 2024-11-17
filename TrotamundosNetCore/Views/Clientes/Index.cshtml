@@ -1,0 +1,151 @@
+﻿@{
+    @*Titulo de pagina*@
+    ViewData["Title"] = "Clientes";
+}
+
+@section Scripts{
+    <script>
+
+        var tabla = null;
+        var tablaDetalle = null;
+
+        function CargaTablaEnter(e) {
+            if (e.keyCode == 13) {
+                CargaTabla();
+                return;
+            }
+        }
+
+        function InicializaTabla(busqueda) {
+
+            if (tabla != null) {
+                tabla.destroy(true);
+                tabla = null;
+            }
+            tabla = $('#tabla').DataTable({
+                paging: true,
+                lengthChange: true,
+                searching: true,
+                ordering: true,
+                info: false,
+                autoWidth: true,
+                aaSorting: []
+            });
+
+            //Realiza nuevamente la busqueda que se estaba haciendo en el datatable
+            if (busqueda) {
+                $('input[type=search]').val(busqueda);
+                tabla.search(busqueda).order(0, 'asc').draw();
+            }
+            else {
+                tabla.order(0, 'asc').draw();
+            }
+
+
+
+            //$('.EditaIncidencia').on('click', Editar);
+        }
+
+        var actualizacionSegundos = 60;
+
+        @*Actualiza pagina con vista parcial*@
+            function InicializaTablaDetalle() {
+
+                if (tablaDetalle != null) {
+                    tablaDetalle.destroy(true);
+                    tablaDetalle = null;
+                }
+
+                tablaDetalle = $('#tablaDetalle').DataTable({
+                    paging: false,
+                    lengthChange: true,
+                    searching: true,
+                    ordering: false,
+                    info: true,
+                    autoWidth: true,
+                    aaSorting: []
+                });
+
+
+            }
+
+
+
+
+
+
+        function CargaClientes() {
+            $.ajax({
+                url: '@Url.Action("ConsultaClientes", "Clientes")',
+                type: 'post',
+                contentType: 'application/json',
+                data: JSON.stringify({
+
+                }),
+                beforeSend: function () {
+                    $("#estadoTabla").css('display', 'block');
+                    $('#datos').empty();
+                },
+                complete: function () {
+                    $("#estadoTabla").css('display', 'none');
+                },
+                success: function (result) {
+                    let busqueda = $('input[type=search]').val();
+                    if (tabla != null) {
+                        tabla.destroy(true);
+                        tabla = null;
+                    }
+
+                    //$('#datos').empty();
+                    $('#datos').html(result);
+
+                    InicializaTabla(busqueda);
+
+                },
+                error: function (error) {
+                    //MostrarAlertaError("Error", "Ocurrio un error al obtener la información del sistema " + sistema, "Cerrar");
+                }
+            })
+        }
+
+        function Busqueda() {
+
+        }
+
+
+
+    </script>
+}
+
+<div>
+
+    <div>
+
+
+        <div id="contenedor" style="clear:both;" class="overlay-wrapper">
+            <div id="datos">
+            </div>
+
+            <div id="mws-jui-dialogo">
+                <div class="mws-dialog-inner">
+                    <div id="detalles">
+                    </div>
+                </div>
+            </div>
+
+            <div id="estadoTabla" class="overlay" style="display:none;">
+                <i class="fa fa-spinner fa-spin">
+                </i>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script>
+    CargaClientes();
+
+
+</script>

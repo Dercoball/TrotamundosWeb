@@ -1,0 +1,195 @@
+﻿
+@model List<TrotamundosNetCore.Clases.Clientes>
+
+
+<div>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<meta content="width=950, initial-scale=1, minimum-scale=0.3, maximum-scale=2, user-scalable=yes" name="viewport">
+	<link rel="stylesheet" href="~/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="~/bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="~/bower_components/Ionicons/css/ionicons.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="~/dist/css/AdminLTE.min.css">
+	<!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+		  page. However, you can choose any other skin. Make sure you
+		  apply the skin class to the body tag so the changes take effect. -->
+	<link rel="stylesheet" href="~/dist/css/skins/skin-blue.min.css">
+	<link rel="stylesheet" href="~/dist/css/skins/skin-red.css">
+
+	<link rel="stylesheet" href="~/bower_components/select2/dist/css/select2.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!-- Google Font -->
+	@*<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">*@
+
+	<!-- REQUIRED JS SCRIPTS -->
+	<!-- jQuery 3 -->
+	<script src="~/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="~/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+	<!-- date-range-picker -->
+	<script src="~/bower_components/moment/min/moment.min.js"></script>
+	<script src="~/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- bootstrap datepicker -->
+	<script src="~/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+	<!-- bootstrap time picker -->
+	<script src="~/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+
+	<!-- DataTables -->
+	<script src="~/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="~/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<!-- iCheck for checkboxes and radio inputs -->
+	<link rel="stylesheet" href="~/plugins/iCheck/square/blue.css">
+	<script src="~/plugins/iCheck/icheck.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="~/dist/js/adminlte.min.js"></script>
+	<!-- Slimscroll -->
+	<script src="~/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="~/bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- Select2 -->
+	<script src="~/bower_components/select2/dist/js/select2.full.min.js"></script>
+	<link rel="stylesheet" href="~/Scripts/jquery-ui.min.css">
+	<script type="text/javascript" src="~/Scripts/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
+	<script type="text/javascript" src="~/Content/Site.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	@if (Model.Count > 0)
+	{
+		<div class="row">
+
+			<div class="col-xs-12">
+
+
+				<div class="box" style="clear:both;">
+					<div class="box-body table-responsive" style="width:100%;">
+						<table id="tabla" class="table table-bordered table-striped table-hover" style="width:100%;">
+							<thead class="table-header">
+								<tr>
+
+									<td>
+										ID Cliente
+									</td>
+
+									<td>
+										Nombre
+									</td>
+									<td>
+										Calle
+									</td>
+									<td>
+										No Int
+									</td>
+									<td>
+										Colonia
+									</td>
+									<td>
+										Ciudad
+									</td>
+									<td>
+										Estado
+									</td>
+									<td>
+										Tel
+									</td>
+									<td>
+										Cel
+									</td>
+									<td>
+										Email
+									</td>
+									<td>
+										RFC
+									</td>
+									<td>
+										Autorización Ext
+									</td>
+									<td>
+										Facturar a
+									</td>
+									<td>
+										Empleado que lo dió de alta
+									</td>
+
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var cliente in Model)
+								{
+									<tr class="display-row">
+										<td>
+											@cliente.idCliente
+										</td>
+
+										<td>
+											@cliente.Nombre
+										</td>
+										<td>
+											@cliente.Calle
+										</td>
+										<td>
+											@cliente.No_int
+										</td>
+
+										<td>
+											@cliente.Colonia
+										</td>
+										<td>
+											@cliente.Ciudad
+										</td>
+										<td>
+											@cliente.Estado
+										</td>
+										<td>
+											@cliente.Tel
+										</td>
+										<td>
+											@cliente.Cel
+										</td>
+										<td>
+											@cliente.Email
+										</td>
+										<td>
+											@cliente.RFC
+										</td>
+										<td>
+											@cliente.Autorizacion_ext
+										</td>
+										<td>
+											@cliente.Facturar_a
+										</td>
+										<td>
+											@cliente.NombreEmpleado
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	}
+	else
+	{
+		<div>
+			<h4>
+				Error al cargar clientes (No hay en existencia)
+
+			</h4>
+		</div>
+	}
+
+
+</div>

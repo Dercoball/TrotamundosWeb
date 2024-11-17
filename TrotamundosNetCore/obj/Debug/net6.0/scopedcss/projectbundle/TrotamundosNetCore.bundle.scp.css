@@ -1,0 +1,147 @@
+/* _content/TrotamundosNetCore/Views/Shared/_Grafica.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-vplo2i58g4] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-vplo2i58g4] {
+  color: #0077cc;
+}
+
+.btn-primary[b-vplo2i58g4] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-vplo2i58g4], .nav-pills .show > .nav-link[b-vplo2i58g4] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-vplo2i58g4] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-vplo2i58g4] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-vplo2i58g4] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-vplo2i58g4] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-vplo2i58g4] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/TrotamundosNetCore/Views/Shared/_GraficaHighchartsTilemap.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-gkppmspnuy] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-gkppmspnuy] {
+  color: #0077cc;
+}
+
+.btn-primary[b-gkppmspnuy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-gkppmspnuy], .nav-pills .show > .nav-link[b-gkppmspnuy] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-gkppmspnuy] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-gkppmspnuy] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-gkppmspnuy] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-gkppmspnuy] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-gkppmspnuy] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/TrotamundosNetCore/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-yugktvfvbo] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-yugktvfvbo] {
+  color: #0077cc;
+}
+
+.btn-primary[b-yugktvfvbo] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-yugktvfvbo], .nav-pills .show > .nav-link[b-yugktvfvbo] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-yugktvfvbo] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-yugktvfvbo] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-yugktvfvbo] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-yugktvfvbo] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-yugktvfvbo] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

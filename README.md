@@ -1,2 +1,0 @@
-# TrotamundosWeb
-Front de Trotamundos

@@ -1,0 +1,11 @@
+﻿@model TrotamundosNetCore.Clases.Util.Chartjs
+
+<div id="@Model.ContainerId" class="chartContainer">
+    <canvas id="@Model.CanvasId">
+
+    </canvas>
+</div>
+
+<script>
+    CreaGrafica("@Model.CanvasId", @Html.Raw(Model.Json), "@Model.BackgroundColor")
+</script>

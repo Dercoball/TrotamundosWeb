@@ -1,0 +1,67 @@
+﻿@model List<TrotamundosNetCore.Clases.Clientes>
+
+<!-- No es necesario el Layout aquí, ya lo has configurado en la vista principal -->
+@{
+    Layout = "_Layout";  // Esto asegura que se esté utilizando el layout adecuado
+}
+
+<section class="content-header">
+    <h1>Clientes</h1>
+</section>
+
+<section class="content">
+    @if (Model.Count > 0)
+    {
+        <div class="box">
+            <div class="box-body table-responsive">
+                <table id="tabla" class="table table-bordered table-striped table-hover">
+                    <thead class="table-header">
+                        <tr>
+                            <th>ID Cliente</th>
+                            <th>Nombre</th>
+                            <th>Calle</th>
+                            <th>No Int</th>
+                            <th>Colonia</th>
+                            <th>Ciudad</th>
+                            <th>Estado</th>
+                            <th>Tel</th>
+                            <th>Cel</th>
+                            <th>Email</th>
+                            <th>RFC</th>
+                            <th>Autorización Ext</th>
+                            <th>Facturar a</th>
+                            <th>Empleado que lo dió de alta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var cliente in Model)
+                        {
+                            <tr>
+                                <td>@cliente.idCliente</td>
+                                <td>@cliente.Nombre</td>
+                                <td>@cliente.Calle</td>
+                                <td>@cliente.No_int</td>
+                                <td>@cliente.Colonia</td>
+                                <td>@cliente.Ciudad</td>
+                                <td>@cliente.Estado</td>
+                                <td>@cliente.Tel</td>
+                                <td>@cliente.Cel</td>
+                                <td>@cliente.Email</td>
+                                <td>@cliente.RFC</td>
+                                <td>@cliente.Autorizacion_ext</td>
+                                <td>@cliente.Facturar_a</td>
+                                <td>@cliente.NombreEmpleado</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div>
+            <h4>Error al cargar clientes (No hay en existencia)</h4>
+        </div>
+    }
+</section>

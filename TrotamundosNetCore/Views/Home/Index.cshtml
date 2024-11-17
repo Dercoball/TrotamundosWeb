@@ -1,0 +1,53 @@
+﻿@{
+    @*Titulo de pagina*@
+    ViewData["Title"] = "Inicio";
+}
+
+@section Scripts{
+    <script>
+        var actualizacionSegundos = 60;
+
+        @*Actualiza pagina con vista parcial*@
+        function Consulta() {
+
+            $.ajax({
+                url: '@Url.Action("Contenido", "Home")',
+                type: 'post',
+                data: {
+
+                },
+                success: function (result) {
+                    $('#contenido').empty();
+
+                    @*Depurado de graficas en caso de tenerlas*@
+                    EliminaGraficas();
+                    EliminaTilemaps();
+
+
+                    $('#contenido').html(result);
+
+                    @*Actualizacion de contenido*@
+                    setTimeout(Consulta, actualizacionSegundos * 1000);
+                },
+                error: function (result) {
+                    console.log(result);
+                }
+            });
+        }
+    </script>
+}
+
+<div>
+
+    <div id="contenido">
+    </div>
+
+</div>
+
+<script>
+    //$(document).on('ready', function () {
+
+    //});
+
+    Consulta();
+</script>
