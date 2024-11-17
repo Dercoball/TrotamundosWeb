@@ -1,0 +1,36 @@
+# Archivos del sistema de archivos del sistema operativo
+Thumbs.db
+ehthumbs.db
+
+# Archivos de Visual Studio
+.vs/
+.vscode/
+.idea/
+
+# Archivos de compilación
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]ist/
+[Dd]ebug/Publish/
+[Dd]ist/Publish/
+bin/
+obj/
+
+# Archivos de configuración de usuario
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Archivos de dependencias
+packages/
+.nuget/
+
+# Archivos de test
+TestResults/
+
+# Archivos de caché
+.cache/
+.vs2019/
+.vs2022/
