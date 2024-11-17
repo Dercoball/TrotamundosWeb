@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arael\\source\\repos\\TrotamundosNetCore\\TrotamundosNetCore\\TrotamundosNetCore.csproj": {}
+    "C:\\Proyectos\\TrotamundosWeb\\TrotamundosNetCore\\TrotamundosNetCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arael\\source\\repos\\TrotamundosNetCore\\TrotamundosNetCore\\TrotamundosNetCore.csproj": {
+    "C:\\Proyectos\\TrotamundosWeb\\TrotamundosNetCore\\TrotamundosNetCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arael\\source\\repos\\TrotamundosNetCore\\TrotamundosNetCore\\TrotamundosNetCore.csproj",
+        "projectUniqueName": "C:\\Proyectos\\TrotamundosWeb\\TrotamundosNetCore\\TrotamundosNetCore.csproj",
         "projectName": "TrotamundosNetCore",
-        "projectPath": "C:\\Users\\arael\\source\\repos\\TrotamundosNetCore\\TrotamundosNetCore\\TrotamundosNetCore.csproj",
-        "packagesPath": "C:\\Users\\arael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arael\\source\\repos\\TrotamundosNetCore\\TrotamundosNetCore\\obj\\",
+        "projectPath": "C:\\Proyectos\\TrotamundosWeb\\TrotamundosNetCore\\TrotamundosNetCore.csproj",
+        "packagesPath": "C:\\Users\\MarMol\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\TrotamundosWeb\\TrotamundosNetCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\arael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MarMol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,8 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0": {
@@ -69,6 +69,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.16, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             },
             "NEST": {
               "target": "Package",
@@ -122,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
